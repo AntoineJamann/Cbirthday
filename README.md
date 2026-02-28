@@ -52,8 +52,8 @@
         <img id="tokamak" src="https://www.eai.enea.it/images/3-2023/plastico-dtt_icona.jpg" alt="Tokamak" onclick="showMessage()">
         <div id="heart" onclick="showMessage()">❤️</div>
         <div id="message">
-            <h1>Happy Birthday!</h1>
-            <p>Bonne année, avec tout mon cœur !</p>
+            <h1>Happy Birthday !</h1>
+            <p>Have the best day !</p>
         </div>
     </div>
 
