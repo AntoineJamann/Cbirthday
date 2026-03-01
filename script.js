@@ -26,7 +26,4 @@ heart.addEventListener('mousemove', (e) => {
 // Show the message when the heart is clicked
 heart.addEventListener('click', () => {
     message.style.display = 'block';
-    setTimeout(() => {
-        message.style.display = 'none';
-    }, 3000); // Hide the message after 3 seconds
 });
