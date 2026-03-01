@@ -12,13 +12,13 @@ body {
 .container {
     position: relative;
     width: 600px;
-    height: 600px;
+    height: 500px;
     margin: 0 auto;
 }
 
 .tokamak {
     width: 600px;
-    height: 600px;
+    height: 500px;
     background-image: url('tokamak.jpg');
     background-size: 100% 100%; /* Stretch the image to fill the container */
     background-repeat: no-repeat;
