@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const message = document.getElementById('message');
     const container = document.querySelector('.container');
 
-    // Set initial position of the heart in pixels
+    // Set initial position of the heart in the center
     heart.style.left = '300px';
     heart.style.top = '300px';
 
@@ -18,25 +18,25 @@ document.addEventListener('DOMContentLoaded', () => {
         const dy = e.clientY - heartCenterY;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        // If the pointer is close to the heart, move it away smoothly
+        // If the pointer is close to the heart, move it away
         if (distance < 150) {
             const angle = Math.atan2(dy, dx);
 
-            // Smaller steps for smoother movement
-            const moveX = Math.cos(angle) * -5;
-            const moveY = Math.sin(angle) * -5;
+            // Move the heart away from the pointer
+            const moveX = Math.cos(angle) * -8; // Adjust speed here
+            const moveY = Math.sin(angle) * -8;
 
             // Get current position in pixels
-            const currentLeft = parseFloat(window.getComputedStyle(heart).left);
-            const currentTop = parseFloat(window.getComputedStyle(heart).top);
+            let currentLeft = parseFloat(window.getComputedStyle(heart).left);
+            let currentTop = parseFloat(window.getComputedStyle(heart).top);
 
             // Calculate new position
             let newX = currentLeft + moveX;
             let newY = currentTop + moveY;
 
             // Constrain the heart within the container bounds
-            newX = Math.max(50, Math.min(newX, containerRect.width - heartRect.width - 50));
-            newY = Math.max(50, Math.min(newY, containerRect.height - heartRect.height - 50));
+            newX = Math.max(0, Math.min(newX, containerRect.width - heartRect.width));
+            newY = Math.max(0, Math.min(newY, containerRect.height - heartRect.height));
 
             // Apply the new position
             heart.style.left = `${newX}px`;
