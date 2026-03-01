@@ -33,7 +33,6 @@ body {
     position: absolute;
     transform: translate(-50%, -50%);
     cursor: pointer;
-    transition: left 0.05s ease-out, top 0.05s ease-out;
 }
 
 .message {
