@@ -31,11 +31,11 @@ body {
     width: 60px;
     height: auto;
     position: absolute;
-    top: 45%;
-    left: 50%;
+    top: 320px;
+    left: 320px;
     transform: translate(-50%, -50%); /* Center the heart */
     cursor: pointer;
-    transition: transform 0.2s ease-out;
+    transition: left 0.5s ease-out, top 0.5s ease-out;
 }
 
 .message {
