@@ -23,6 +23,8 @@ body {
     width: 100px;
     height: auto;
     cursor: pointer;
+    position: relative;
+    top: -20px; /* Adjust this value to move the heart up or down */
 }
 
 .message {
