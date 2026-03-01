@@ -51,5 +51,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     heart.addEventListener('click', () => {
         message.style.display = 'block';
+        setTimeout(() => {
+            message.style.opacity = '1'; // Fade in the message
+        }, 10); // Small delay to ensure display is set to block
     });
 });
