@@ -7,16 +7,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const heartCenterX = heartRect.left + heartRect.width / 2;
         const heartCenterY = heartRect.top + heartRect.height / 2;
 
+        // Calculate the distance between the pointer and the heart
         const dx = e.clientX - heartCenterX;
         const dy = e.clientY - heartCenterY;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 350) {
+        // If the pointer is close to the heart, move the heart away
+        if (distance < 400) {
+            // Calculate the angle between the pointer and the heart
             const angle = Math.atan2(dy, dx);
-            const moveX = Math.cos(angle) * 30;
-            const moveY = Math.sin(angle) * 30;
-            heart.style.transform = `translate(${moveX - 50}%, ${moveY}px)`;
+            // Move the heart in the opposite direction (away from the pointer)
+            const moveX = Math.cos(angle) * -50; // Negative to move away
+            const moveY = Math.sin(angle) * -50;
+            heart.style.transform = `translate(${moveX}px, ${moveY}px) translateX(-50%)`;
         } else {
+            // Reset the heart's position if the pointer is far
             heart.style.transform = 'translateX(-50%)';
         }
     });
