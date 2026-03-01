@@ -18,8 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (distance < 150) {
             const angle = Math.atan2(dy, dx);
             // Increase the movement distance for more escape space
-            const moveX = Math.cos(angle) * -80;
-            const moveY = Math.sin(angle) * -80;
+            const moveX = Math.cos(angle) * -50;
+            const moveY = Math.sin(angle) * -50;
 
             // Calculate new position, ensuring it stays within the container
             let newX = heartCenterX + moveX;
