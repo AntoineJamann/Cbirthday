@@ -9,12 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Define the movement boundaries (smaller than the container)
     const minX = 100;
-    const maxX = 650;
+    const maxX = 600;
     const minY = 100;
-    const maxY = 300;
+    const maxY = 600;
 
     heart.addEventListener('mousemove', (e) => {
-        const containerRect = container.getBoundingClientRect();
         const heartRect = heart.getBoundingClientRect();
         const heartCenterX = heartRect.left + heartRect.width / 2;
         const heartCenterY = heartRect.top + heartRect.height / 2;
@@ -29,8 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const angle = Math.atan2(dy, dx);
 
             // Move the heart away from the pointer
-            const moveX = Math.cos(angle) * -30; // Adjust speed here
-            const moveY = Math.sin(angle) * -30;
+            const moveX = Math.cos(angle) * -40; // Smaller step for smoother movement
+            const moveY = Math.sin(angle) * -40;
 
             // Get current position in pixels
             let currentLeft = parseFloat(window.getComputedStyle(heart).left);
@@ -40,9 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
             let newX = currentLeft + moveX;
             let newY = currentTop + moveY;
 
-            // Constrain the heart within the container bounds
-            newX = Math.max(0, Math.min(newX, containerRect.width - heartRect.width));
-            newY = Math.max(0, Math.min(newY, containerRect.height - heartRect.height));
+            // Constrain the heart within the defined boundaries
+            newX = Math.max(minX, Math.min(newX, maxX));
+            newY = Math.max(minY, Math.min(newY, maxY));
 
             // Apply the new position
             heart.style.left = `${newX}px`;
