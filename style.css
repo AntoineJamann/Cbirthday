@@ -12,8 +12,7 @@ body {
 .container {
     position: relative;
     width: 600px;
-    height: 500px;
-    margin: 0 auto;
+    height: 600px;
 }
 
 .tokamak {
