@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const dy = e.clientY - heartCenterY;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 150) {
+        if (distance < 300) {
             const angle = Math.atan2(dy, dx);
             const moveX = Math.cos(angle) * 50;
             const moveY = Math.sin(angle) * 50;
