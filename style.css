@@ -21,31 +21,8 @@ body {
 
 .heart {
     width: 100px;
-    height: 100px;
-    background-color: #e74c3c;
-    transform: rotate(45deg);
-    position: relative;
+    height: auto;
     cursor: pointer;
-}
-
-.heart:before,
-.heart:after {
-    content: "";
-    width: 100px;
-    height: 100px;
-    background-color: #e74c3c;
-    border-radius: 50%;
-    position: absolute;
-}
-
-.heart:before {
-    top: -50px;
-    left: 0;
-}
-
-.heart:after {
-    top: 0;
-    left: -50px;
 }
 
 .message {
