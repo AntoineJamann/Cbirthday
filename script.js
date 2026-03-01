@@ -11,10 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const dy = e.clientY - heartCenterY;
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        if (distance < 80) {
+        if (distance < 150) {
             const angle = Math.atan2(dy, dx);
-            const moveX = Math.cos(angle) * 20;
-            const moveY = Math.sin(angle) * 20;
+            const moveX = Math.cos(angle) * 50;
+            const moveY = Math.sin(angle) * 50;
             heart.style.transform = `translate(${moveX - 50}%, ${moveY}px)`;
         } else {
             heart.style.transform = 'translateX(-50%)';
