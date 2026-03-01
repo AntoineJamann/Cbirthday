@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const angle = Math.atan2(dy, dx);
 
             // Move the heart away from the pointer
-            const moveX = Math.cos(angle) * -15; // Adjust speed here
-            const moveY = Math.sin(angle) * -15;
+            const moveX = Math.cos(angle) * -30; // Adjust speed here
+            const moveY = Math.sin(angle) * -30;
 
             // Get current position in pixels
             let currentLeft = parseFloat(window.getComputedStyle(heart).left);
