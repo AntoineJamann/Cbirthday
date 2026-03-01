@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
     heart.style.top = '300px';
 
     // Define the movement boundaries (smaller than the container)
-    const minX = 200;
+    const minX = 100;
     const maxX = 700;
-    const minY = 280;
-    const maxY = 200;
+    const minY = 200;
+    const maxY = 600;
 
     heart.addEventListener('mousemove', (e) => {
         const heartRect = heart.getBoundingClientRect();
