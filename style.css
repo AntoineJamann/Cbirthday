@@ -1,34 +1,25 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-}
-
-.heart {
-    width: 100px;
-    height: auto;
-    cursor: pointer;
-    transition: transform 0.1s ease-out;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
 .tokamak {
     position: relative;
     width: 300px;
     height: 300px;
-    background-color: transparent;
-    border: 30px solid #3498db;
-    border-radius: 50%;
+    background-image: url('tokamak.png');
+    background-size: contain;
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0 auto;
+}
+
+.heart {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.1s ease-out;
+    position: absolute;
+    top: 40%; /* Adjust this to position the heart vertically */
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .message {
