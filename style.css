@@ -14,8 +14,8 @@ body {
 }
 
 .tokamak {
-    width: 300px;
-    height: 300px;
+    width: 600px;
+    height: 600px;
     background-image: url('tokamak.jpg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -31,7 +31,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
-    transition: transform 0.1s ease-out;
+    transition: transform 0.05s ease-out;
 }
 
 .message {
